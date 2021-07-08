@@ -1,4 +1,4 @@
-## NETLIFY DEMO
+## HEROKU DEMO
 [HEROKU DEMO - CLICK ](https://smartedu-oguzcanuzunoner.herokuapp.com/)
 
 "# SmartEduProject" 
