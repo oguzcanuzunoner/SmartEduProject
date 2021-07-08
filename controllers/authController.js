@@ -34,9 +34,7 @@ exports.loginUser = async (req, res) => {
             res.status(400).redirect("/login");
           }
 
-          //USER SESSION
-          req.session.userID = user._id;
-          res.status(200).redirect("/users/dashboard");
+
         });
       }else{
         req.flash("error", "User is not exist!");

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
+const methodOverride = require("method-override");
 const pageRoute = require("./routers/pageRoute");
 const courseRoute = require("./routers/courseRoute");
 const categoryRoute = require("./routers/categoryRoute");
@@ -45,6 +46,11 @@ app.use((req, res, next) => {
   res.locals.flashMessages = req.flash();
   next();
 });
+app.use(
+  methodOverride("_method", {
+    methods: ["POST", "GET"], 
+  })
+);
 
 //Routers
 app.use("*", (req, res, next) => {
